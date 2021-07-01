@@ -21,3 +21,6 @@ let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     `, SpriteKind.Player)
 tiles.setTilemap(tilemap`level1`)
+game.onUpdateInterval(500, function () {
+	
+})
