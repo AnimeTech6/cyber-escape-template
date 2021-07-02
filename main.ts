@@ -2,25 +2,25 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`transparency16`, function (sp
 	
 })
 scene.setBackgroundColor(2)
+tiles.setTilemap(tilemap`level1`)
 let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
-    . . . . . . 8 8 8 8 8 . . . . . 
-    . . . . . . . 8 8 8 . . . . . . 
-    . . . . . . . 8 8 8 . . . . . . 
-    . . . . . . . 8 8 8 . . . . . . 
-    . . . . . . . 8 8 8 . . . . . . 
-    . . . . . 8 8 8 8 8 8 8 . . . . 
-    . . . . . 8 8 8 8 8 8 8 . . . . 
-    . . . . 8 8 8 8 8 8 8 8 8 . . . 
-    . . . . 8 8 8 8 8 8 8 8 8 . . . 
-    . . . 8 8 8 8 8 8 8 8 8 8 8 . . 
-    . . . 8 8 8 8 8 8 8 8 8 8 8 . . 
-    . . . 8 8 8 8 8 8 8 8 8 8 8 . . 
+    . . . . . . 5 5 5 5 5 . . . . . 
+    . . . . . . . 5 5 5 . . . . . . 
+    . . . . . . . 5 5 5 . . . . . . 
+    . . . . . . . 5 5 5 . . . . . . 
+    . . . . . . . 5 5 5 . . . . . . 
+    . . . . . 5 5 5 5 5 5 5 . . . . 
+    . . . . . 5 5 5 5 5 5 5 . . . . 
+    . . . . 5 5 5 5 5 5 5 5 5 . . . 
+    . . . . 5 5 5 5 5 5 5 5 5 . . . 
+    . . . 5 5 5 5 5 5 5 5 5 5 5 . . 
+    . . . 5 5 5 5 5 5 5 5 5 5 5 . . 
+    . . . 5 5 5 5 5 5 5 5 5 5 5 . . 
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     `, SpriteKind.Player)
-tiles.setTilemap(tilemap`level1`)
-game.onUpdateInterval(500, function () {
-	
-})
+controller.moveSprite(mySprite)
+tiles.placeOnTile(mySprite, tiles.getTileLocation(2, 2))
+scene.cameraFollowSprite(mySprite)
