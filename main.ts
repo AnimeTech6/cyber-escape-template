@@ -1,6 +1,6 @@
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleInsignia, function (sprite, location) {
-    music.stopAllSounds()
     music.baDing.play()
+    music.stopAllSounds()
     game.showLongText("\"ΜΠΡΑΒΟ! ΤΕΛΕΙΩΣΕΣ ΤΟΝ ΛΑΒΥΡΙΝΘΟ! ΒΑΛΕ ΤΗΝ ΛΕΞΗ \"ΓΗ\" ΓΙΑ ΝΑ ΠΕΡΑΣΕΙΣ\"", DialogLayout.Center)
 })
 scene.setBackgroundColor(2)
